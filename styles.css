@@ -1,52 +1,105 @@
-.action-cards {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #5aa897, #d1f0e1);
+    color: #333;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.analysis-row {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin: 2rem 0;
     flex-wrap: wrap;
 }
 
-.action-card {
+.result-item {
     flex: 1;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     padding: 1rem;
-    text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.action-card img {
+.result-item h3 {
+    margin: 0.5rem 0;
+}
+
+.result-icon {
     width: 50px;
     height: 50px;
     margin-bottom: 1rem;
 }
 
-.action-card h4 {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-    color: #333;
+.diabetes-risk {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(240, 128, 128, 0.2);
+    border: 2px solid rgba(240, 128, 128, 0.5);
+    border-radius: 10px;
+    text-align: center;
 }
 
-.action-card p {
-    font-size: 0.9rem;
-    color: #555;
+.diabetes-risk h3 {
+    color: #e63946;
     margin-bottom: 1rem;
 }
 
-.card-button {
-    padding: 0.7rem 1.5rem;
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button-animated {
+    padding: 1rem 2rem;
     border: none;
     border-radius: 50px;
     background: #5aa897;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.card-button:hover {
+.button-animated:hover {
+    transform: scale(1.1);
     background: #4a908a;
-    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 img[src="contohlipatanleher.png"] {
@@ -54,3 +107,4 @@ img[src="contohlipatanleher.png"] {
     height: auto;
     display: block;
     margin: 1rem auto;
+}
