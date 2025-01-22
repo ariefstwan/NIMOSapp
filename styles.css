@@ -3,6 +3,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
     background: linear-gradient(135deg, #5aa897, #d1f0e1);
     color: #333;
 }
@@ -24,6 +29,15 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
     text-align: center;
     animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Image Styling for Step 1 */
+.special-image {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 /* Row Styling */
@@ -51,16 +65,6 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Image Styling */
-.result-icon, .action-icon {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* Diabetes Risk Styling */
 .diabetes-risk {
     margin: 2rem 0;
@@ -77,7 +81,7 @@ body {
 }
 
 /* Button Styling */
-.card-button, .restart-button, .home-button {
+button {
     padding: 0.7rem 1.5rem;
     border: none;
     border-radius: 50px;
@@ -88,9 +92,9 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.card-button:hover, .restart-button:hover, .home-button:hover {
+button:hover {
     background: #4a908a;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Footer Styling */
@@ -115,11 +119,6 @@ footer {
 
 /* Responsiveness */
 @media (max-width: 768px) {
-    .result-icon, .action-icon {
-        width: 60px;
-        height: 60px;
-    }
-
     .glass-card {
         padding: 1.5rem;
     }
@@ -133,7 +132,7 @@ footer {
         width: 100%;
     }
 
-    .card-button, .restart-button, .home-button {
+    button {
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
     }
