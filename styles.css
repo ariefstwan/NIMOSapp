@@ -2,8 +2,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #5aa897, #d1f0e1);
-    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,14 +9,9 @@ body {
     flex-direction: column;
 }
 
-.landing-page, .step-container, .results-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 2rem;
+.bg-green {
+    background: linear-gradient(135deg, #5aa897, #d1f0e1);
+    color: #333;
 }
 
 .glass-card {
@@ -33,39 +26,9 @@ body {
     max-width: 500px;
 }
 
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.login-button, .skip-button, .restart-button, .home-button, .camera-button {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 50px;
-    background: #5aa897;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
 .loader {
     border: 5px solid #f3f3f3;
     border-radius: 50%;
     border-top: 5px solid #5aa897;
     width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 1rem auto;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+    height: 40px
