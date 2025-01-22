@@ -9,24 +9,38 @@
 <body class="bg-green">
     <div class="results-container">
         <div class="glass-card animate-fade-in">
-            <h2>Hasil Deteksi Dini</h2>
+            <h2>Hasil Analisis Anda</h2>
 
             <div class="result-item">
+                <img src="icons/steps-icon.svg" alt="Langkah Harian" class="result-icon">
                 <h3>Langkah Harian</h3>
-                <p>4,500 langkah</p>
-                <p class="analysis">Makna: Aktivitas fisik rendah. Disarankan untuk mencapai 7,000 langkah per hari.</p>
+                <p>Anda telah mencapai <strong>4,500 langkah</strong> hari ini.</p>
+                <p class="analysis">Sempurna untuk memulai, tetapi coba tingkatkan hingga <strong>7,000 langkah</strong> untuk kesehatan optimal!</p>
             </div>
 
             <div class="result-item">
+                <img src="icons/sleep-icon.svg" alt="Kualitas Tidur" class="result-icon">
                 <h3>Kualitas Tidur</h3>
-                <p>5 jam tidur</p>
-                <p class="analysis">Makna: Kualitas tidur buruk. Usahakan tidur 7-8 jam setiap malam.</p>
+                <p>Rata-rata tidur Anda: <strong>5 jam</strong> per malam.</p>
+                <p class="analysis">Tidur cukup adalah kunci energi dan kesehatan. Usahakan tidur <strong>7-8 jam</strong> setiap malam.</p>
             </div>
 
             <div class="result-item">
-                <h3>Indikasi Risiko Diabetes</h3>
-                <p><span class="status warning">85%</span> Risiko</p>
-                <p class="analysis">Makna: Risiko diabetes tinggi. Disarankan untuk konsultasi ke dokter dan menjalani pola hidup sehat.</p>
+                <img src="icons/diabetes-icon.svg" alt="Risiko Diabetes" class="result-icon">
+                <h3>Risiko Diabetes</h3>
+                <p>Hasil menunjukkan risiko diabetes sebesar <strong>85%</strong>.</p>
+                <p class="analysis">Jangan khawatir—risiko ini dapat diminimalkan dengan pola hidup sehat dan pemeriksaan rutin.</p>
+            </div>
+
+            <div class="recommendations">
+                <h3>Rekomendasi Khusus untuk Anda</h3>
+                <ul>
+                    <li>Perbanyak aktivitas fisik, seperti berjalan kaki setiap hari.</li>
+                    <li>Tingkatkan kualitas tidur dengan menjaga rutinitas tidur yang konsisten.</li>
+                    <li>Kurangi konsumsi gula dan makanan tinggi karbohidrat sederhana.</li>
+                    <li>Segera jadwalkan konsultasi dengan dokter.</li>
+                </ul>
+                <button class="tips-button button-animated" onclick="showTips()">Lihat Tips Sehat</button>
             </div>
 
             <div class="button-group">
@@ -47,6 +61,10 @@
 
         function goHome() {
             window.location.href = "index.html";
+        }
+
+        function showTips() {
+            alert("Tips sehat akan tersedia pada fitur berikutnya!");
         }
     </script>
 </body>
