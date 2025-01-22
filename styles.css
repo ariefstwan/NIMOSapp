@@ -3,11 +3,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
     background: linear-gradient(135deg, #5aa897, #d1f0e1);
     color: #333;
 }
@@ -16,7 +11,6 @@ body {
     width: 100%;
     max-width: 1024px;
     padding: 1rem;
-    box-sizing: border-box;
 }
 
 /* Glassmorphism Card */
@@ -59,8 +53,8 @@ body {
 
 /* Image Styling */
 .result-icon, .action-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 1rem;
     display: block;
     margin-left: auto;
@@ -96,7 +90,7 @@ body {
 
 .card-button:hover, .restart-button:hover, .home-button:hover {
     background: #4a908a;
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 /* Footer Styling */
@@ -121,13 +115,13 @@ footer {
 
 /* Responsiveness */
 @media (max-width: 768px) {
-    .glass-card {
-        padding: 1.5rem;
-    }
-
     .result-icon, .action-icon {
         width: 60px;
         height: 60px;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
     }
 
     .analysis-row, .action-row {
@@ -142,29 +136,5 @@ footer {
     .card-button, .restart-button, .home-button {
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .result-icon, .action-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .glass-card {
-        padding: 1rem;
-    }
-
-    h2, h3 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    .card-button, .restart-button, .home-button {
-        font-size: 0.8rem;
-        padding: 0.5rem 1rem;
     }
 }
