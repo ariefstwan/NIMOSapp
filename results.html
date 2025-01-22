@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasil Analisis</title>
+    <title>Hasil Deteksi Dini</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="results-container">
         <div class="glass-card">
-            <h2>Hasil Analisis Anda</h2>
+            <h2>Hasil Deteksi Dini</h2>
+
             <div class="result-item">
                 <h3>Langkah Harian</h3>
-                <p>4,500 langkah (di bawah rata-rata)</p>
+                <p>4,500 langkah</p>
+                <p class="analysis">Makna: Aktivitas fisik rendah. Disarankan untuk mencapai 7,000 langkah per hari.</p>
             </div>
+
             <div class="result-item">
                 <h3>Kualitas Tidur</h3>
-                <p>Kualitas tidur buruk (5 jam)</p>
+                <p>5 jam tidur</p>
+                <p class="analysis">Makna: Kualitas tidur buruk. Usahakan tidur 7-8 jam setiap malam.</p>
             </div>
+
             <div class="result-item">
-                <h3>Aktivitas Fisik</h3>
-                <p>Aktivitas fisik rendah</p>
+                <h3>Indikasi Risiko Diabetes</h3>
+                <p><span class="status warning">85%</span> Risiko</p>
+                <p class="analysis">Makna: Risiko diabetes tinggi. Disarankan untuk konsultasi ke dokter dan menjalani pola hidup sehat.</p>
+            </div>
+
+            <div class="recommendations">
+                <h3>Rekomendasi</h3>
+                <ul>
+                    <li>Perbanyak aktivitas fisik, seperti berjalan kaki setiap hari.</li>
+                    <li>Tingkatkan kualitas tidur dengan menjaga rutinitas tidur yang konsisten.</li>
+                    <li>Kurangi konsumsi gula dan makanan tinggi karbohidrat sederhana.</li>
+                    <li>Segera jadwalkan konsultasi dengan dokter.</li>
+                </ul>
+            </div>
+
+            <div class="button-group">
+                <button class="restart-button" onclick="restartDetection()">Mulai Ulang</button>
+                <button class="home-button" onclick="goHome()">Kembali ke Beranda</button>
             </div>
         </div>
     </div>
@@ -28,5 +49,15 @@
     <footer>
         <p>Made with ❤️ by Arief</p>
     </footer>
+
+    <script>
+        function restartDetection() {
+            window.location.href = "step1.html";
+        }
+
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 </html>

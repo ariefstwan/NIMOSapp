@@ -11,7 +11,10 @@
         <div class="welcome-card">
             <h1>Selamat Datang di NIMOS</h1>
             <p>Sistem Pemantauan dan Observasi Non-Invasif</p>
-            <button class="start-button" onclick="startDetection()">Mulai Deteksi Dini</button>
+            <div class="button-group">
+                <button class="login-button" onclick="login()">Login</button>
+                <button class="skip-button" onclick="startDetection()">Lewati & Mulai Deteksi Dini</button>
+            </div>
         </div>
     </div>
 
@@ -20,6 +23,10 @@
     </footer>
 
     <script>
+        function login() {
+            alert("Fitur login belum tersedia, tetapi dapat dikembangkan di masa depan!");
+        }
+
         function startDetection() {
             window.location.href = "step1.html";
         }
