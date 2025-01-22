@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1 - Pengambilan Gambar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="step-container">
+        <div class="glass-card">
+            <h2>Langkah 1: Pengambilan Gambar</h2>
+            <p>Silakan ambil gambar lipatan kulit Anda untuk analisis.</p>
+            <button class="camera-button" onclick="captureImage()">Ambil Gambar</button>
+            <div id="image-status" class="status-message hidden">
+                <p>Gambar berhasil diambil!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by Arief</p>
+    </footer>
+
+    <script>
+        function captureImage() {
+            const status = document.getElementById("image-status");
+            status.classList.remove("hidden");
+            setTimeout(() => {
+                window.location.href = "step2.html";
+            }, 2000); // Simulasi proses
+        }
+    </script>
+</body>
+</html>
