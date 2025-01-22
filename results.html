@@ -9,69 +9,32 @@
 <body class="bg-green">
     <div class="results-container">
         <div class="glass-card animate-fade-in">
-            <h2>Hasil Analisis Anda</h2>
+            <h2>Opsi Tindakan Anda</h2>
 
-            <div class="analysis-row">
-                <!-- Aktivitas Fisik -->
-                <div class="result-item">
-                    <img src="icons/steps-icon.svg" alt="Langkah Harian" class="result-icon">
-                    <h3>Aktivitas Fisik</h3>
-                    <p>Anda telah mencapai <strong>4,500 langkah</strong> hari ini.</p>
-                    <p class="analysis">Sempurna untuk memulai, tetapi coba tingkatkan hingga <strong>7,000 langkah</strong> untuk kesehatan optimal!</p>
+            <div class="action-row">
+                <!-- Card 1: Pesan Glucometer -->
+                <div class="action-card">
+                    <img src="icons/glucometer-icon.svg" alt="Pesan Glucometer" class="action-icon">
+                    <h3>Pesan Glucometer</h3>
+                    <p>Mulai pantau gula darah Anda dari rumah dengan glucometer.</p>
+                    <button class="card-button" onclick="orderGlucometer()">Pesan Sekarang</button>
                 </div>
 
-                <!-- Kualitas Tidur -->
-                <div class="result-item">
-                    <img src="icons/sleep-icon.svg" alt="Kualitas Tidur" class="result-icon">
-                    <h3>Kualitas Tidur</h3>
-                    <p>Rata-rata tidur Anda: <strong>5 jam</strong> per malam.</p>
-                    <p class="analysis">Tidur cukup adalah kunci energi dan kesehatan. Usahakan tidur <strong>7-8 jam</strong> setiap malam.</p>
+                <!-- Card 2: Rekomendasi Faskes -->
+                <div class="action-card">
+                    <img src="icons/healthcare-icon.svg" alt="Rekomendasi Faskes" class="action-icon">
+                    <h3>Rekomendasi Faskes</h3>
+                    <p>Kunjungi fasilitas kesehatan terdekat untuk pemeriksaan lebih lanjut.</p>
+                    <button class="card-button" onclick="findHealthcare()">Cari Faskes</button>
                 </div>
 
-                <!-- Lipatan Kulit -->
-                <div class="result-item">
-                    <img src="icons/skin-icon.svg" alt="Lipatan Kulit" class="result-icon">
-                    <h3>Lipatan Kulit</h3>
-                    <p>Analisis menunjukkan indikasi <strong>Acanthosis Nigricans</strong>.</p>
-                    <p class="analysis">Indikasi ini dapat menjadi tanda resistensi insulin. Konsultasikan dengan dokter untuk pemeriksaan lebih lanjut.</p>
+                <!-- Card 3: Hubungi Telemedis -->
+                <div class="action-card">
+                    <img src="icons/telemedicine-icon.svg" alt="Hubungi Telemedis" class="action-icon">
+                    <h3>Hubungi Telemedis</h3>
+                    <p>Dapatkan konsultasi langsung dengan tenaga medis secara online.</p>
+                    <button class="card-button" onclick="contactTelemedicine()">Konsultasi Sekarang</button>
                 </div>
-            </div>
-
-            <!-- Risiko Diabetes -->
-            <div class="diabetes-risk highlight">
-                <h3>Risiko Diabetes</h3>
-                <p>Hasil menunjukkan risiko diabetes sebesar <strong>85%</strong>.</p>
-
-                <div class="action-cards">
-                    <!-- Card: Pesan Glucometer -->
-                    <div class="action-card">
-                        <img src="icons/glucometer-icon.svg" alt="Pesan Glucometer">
-                        <h4>Pesan Glucometer</h4>
-                        <p>Mulai pantau gula darah Anda dari rumah dengan glucometer.</p>
-                        <button class="card-button" onclick="orderGlucometer()">Pesan Sekarang</button>
-                    </div>
-
-                    <!-- Card: Rekomendasi Faskes -->
-                    <div class="action-card">
-                        <img src="icons/healthcare-icon.svg" alt="Rekomendasi Faskes">
-                        <h4>Rekomendasi Faskes</h4>
-                        <p>Kunjungi fasilitas kesehatan terdekat untuk pemeriksaan lebih lanjut.</p>
-                        <button class="card-button" onclick="findHealthcare()">Cari Faskes</button>
-                    </div>
-
-                    <!-- Card: Telemedis -->
-                    <div class="action-card">
-                        <img src="icons/telemedicine-icon.svg" alt="Hubungi Telemedis">
-                        <h4>Hubungi Telemedis</h4>
-                        <p>Dapatkan konsultasi langsung dengan tenaga medis secara online.</p>
-                        <button class="card-button" onclick="contactTelemedicine()">Konsultasi Sekarang</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="button-group">
-                <button class="restart-button button-animated" onclick="restartDetection()">Mulai Ulang</button>
-                <button class="home-button button-animated" onclick="goHome()">Kembali ke Beranda</button>
             </div>
         </div>
     </div>
@@ -81,14 +44,6 @@
     </footer>
 
     <script>
-        function restartDetection() {
-            window.location.href = "step1.html";
-        }
-
-        function goHome() {
-            window.location.href = "index.html";
-        }
-
         function orderGlucometer() {
             alert("Anda akan diarahkan ke halaman untuk memesan glucometer.");
         }
