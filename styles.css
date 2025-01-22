@@ -153,3 +153,65 @@ img[src="contohlipatanleher.png"] {
     background: #4a908a;
     transform: scale(1.1);
 }
+
+/* Cards Layout */
+.analysis-row, .action-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.result-item, .action-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-item:hover, .action-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.result-icon, .action-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+/* Diabetes Highlight */
+.diabetes-risk {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(240, 128, 128, 0.2);
+    border: 2px solid rgba(240, 128, 128, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.diabetes-risk h3 {
+    color: #e63946;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.card-button, .restart-button, .home-button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background: #5aa897;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-button:hover, .restart-button:hover, .home-button:hover {
+    background: #4a908a;
+    transform: scale(1.1);
+}
