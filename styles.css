@@ -1,3 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #5aa897, #d1f0e1);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.landing-page, .step-container, .results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 90%;
+    max-width: 500px;
+}
+
 .button-group {
     display: flex;
     justify-content: center;
@@ -5,7 +40,7 @@
     margin-top: 1.5rem;
 }
 
-.login-button, .skip-button, .restart-button, .home-button {
+.login-button, .skip-button, .restart-button, .home-button, .camera-button {
     padding: 1rem 2rem;
     border: none;
     border-radius: 50px;
@@ -16,25 +51,21 @@
     transition: background 0.3s ease;
 }
 
-.login-button:hover, .skip-button:hover, .restart-button:hover, .home-button:hover {
-    background: #4a908a;
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #5aa897;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
 }
 
-.analysis {
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 0.5rem;
-}
-
-.recommendations ul {
-    text-align: left;
-    margin-top: 1rem;
-    padding-left: 1.5rem;
-    line-height: 1.6;
-}
-
-.recommendations h3 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: #5aa897;
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
