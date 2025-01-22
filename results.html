@@ -41,7 +41,32 @@
             <div class="diabetes-risk highlight">
                 <h3>Risiko Diabetes</h3>
                 <p>Hasil menunjukkan risiko diabetes sebesar <strong>85%</strong>.</p>
-                <p class="analysis">Jangan khawatir—risiko ini dapat diminimalkan dengan pola hidup sehat dan pemeriksaan rutin.</p>
+
+                <div class="action-cards">
+                    <!-- Card: Pesan Glucometer -->
+                    <div class="action-card">
+                        <img src="icons/glucometer-icon.svg" alt="Pesan Glucometer">
+                        <h4>Pesan Glucometer</h4>
+                        <p>Mulai pantau gula darah Anda dari rumah dengan glucometer.</p>
+                        <button class="card-button" onclick="orderGlucometer()">Pesan Sekarang</button>
+                    </div>
+
+                    <!-- Card: Rekomendasi Faskes -->
+                    <div class="action-card">
+                        <img src="icons/healthcare-icon.svg" alt="Rekomendasi Faskes">
+                        <h4>Rekomendasi Faskes</h4>
+                        <p>Kunjungi fasilitas kesehatan terdekat untuk pemeriksaan lebih lanjut.</p>
+                        <button class="card-button" onclick="findHealthcare()">Cari Faskes</button>
+                    </div>
+
+                    <!-- Card: Telemedis -->
+                    <div class="action-card">
+                        <img src="icons/telemedicine-icon.svg" alt="Hubungi Telemedis">
+                        <h4>Hubungi Telemedis</h4>
+                        <p>Dapatkan konsultasi langsung dengan tenaga medis secara online.</p>
+                        <button class="card-button" onclick="contactTelemedicine()">Konsultasi Sekarang</button>
+                    </div>
+                </div>
             </div>
 
             <div class="button-group">
@@ -62,6 +87,18 @@
 
         function goHome() {
             window.location.href = "index.html";
+        }
+
+        function orderGlucometer() {
+            alert("Anda akan diarahkan ke halaman untuk memesan glucometer.");
+        }
+
+        function findHealthcare() {
+            alert("Anda akan diarahkan ke daftar fasilitas kesehatan terdekat.");
+        }
+
+        function contactTelemedicine() {
+            alert("Anda akan diarahkan ke layanan telemedis untuk konsultasi.");
         }
     </script>
 </body>
