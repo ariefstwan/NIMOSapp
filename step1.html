@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step 1 - Pengambilan Gambar</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-green">
     <div class="step-container">
         <div class="glass-card animate-slide-in">
             <h2>Langkah 1: Pengambilan Gambar</h2>
             <p>Silakan ambil gambar lipatan kulit Anda untuk analisis.</p>
-            <img src="contohlipatanleher.png" alt="">
-            <button class="camera-button button-animated" onclick="captureImage()">Ambil Gambar</button>
-            <div id="image-status" class="status-message hidden">
-                <p>Gambar berhasil diambil!</p>
+            <img src="contohlipatanleher.png" alt="" style="margin: 1rem 0;"> <!-- Add margin for spacing -->
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <!-- Center the button -->
+                <button class="camera-button button-animated" onclick="captureImage()">Ambil Gambar</button>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Made with ❤️ for Ikhwan</p>
+        <p>Made with ❤️</p>
     </footer>
 
     <script>
         function captureImage() {
-            const status = document.getElementById("image-status");
-            status.classList.remove("hidden");
-            setTimeout(() => {
-                window.location.href = "step2.html";
-            }, 2000);
+            window.location.href = "step2.html";
         }
     </script>
 </body>
+
 </html>

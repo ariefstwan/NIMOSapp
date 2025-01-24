@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 0 2rem; /* Add padding for better spacing */
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -48,9 +48,17 @@ button:hover {
 
 .button-group {
     display: flex;
+    flex-direction: column; /* Stack buttons vertically */
     justify-content: center;
     align-items: center;
-    gap: 0.5rem; /* Spasi antar tombol */
+    gap: 1rem; /* Increase gap for better spacing */
+    margin-top: 1.5rem; /* Add margin-top for spacing */
+}
+
+@media (min-width: 769px) {
+    .button-group {
+        flex-direction: column; /* Ensure buttons are stacked vertically on desktop */
+    }
 }
 
 .card-button {
@@ -86,7 +94,7 @@ button:hover {
     width: 100%;
     max-width: 400px; /* Maksimal lebar */
     padding: 2rem;
-    margin: 1rem auto; /* Rata tengah dengan jarak antar kartu */
+    margin: 2rem auto; /* Increase margin for better spacing */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.5); /* Transparansi sesuai glassmorphism */
@@ -175,10 +183,15 @@ button:hover {
     }
 }
 
+.hidden {
+    display: none;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
     body {
         padding: 0 1rem; /* Tambah padding agar lebih compact */
+        flex-direction: column; /* Flex direction column for smaller screens */
     }
 
     .glass-card {
@@ -189,6 +202,20 @@ button:hover {
     button {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 1rem; /* Add space between buttons */
+    }
+
+    .analysis-row, .action-row {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .result-item, .action-card {
+        width: 100%; /* Full width for items */
+        margin: 0.5rem 0; /* Reduce margin */
     }
 }
 
@@ -207,4 +234,13 @@ button:hover {
         font-size: 0.8rem;
         padding: 0.5rem 0.8rem;
     }
+
+    .button-group {
+        gap: 0.5rem; /* Reduce space between buttons */
+    }
+}
+
+footer {
+    margin-top: 2rem; /* Add margin-top for spacing */
+    text-align: center; /* Center align footer text */
 }
