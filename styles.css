@@ -104,6 +104,12 @@ button:hover {
     animation: slideUp 0.8s ease-in-out;
 }
 
+.glass-card h3 {
+    font-size: 1.8rem; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: #d94e4e; /* Red color for emphasis */
+}
+
 /* Heading dan Text Alignment */
 .glass-card h1 {
     font-size: 1.6rem;
@@ -133,8 +139,8 @@ button:hover {
 /* Elemen dalam Kontainer */
 .result-item, .action-card {
     width: 100%; /* Pakai lebar penuh */
-    margin: 1rem 0; /* Spasi antar elemen dalam kartu */
-    padding: 1rem; /* Jarak dalam elemen */
+    margin: 1.5rem 0; /* Increase margin for better spacing */
+    padding: 1.5rem; /* Increase padding for better spacing */
     border-radius: 10px; /* Sudut membulat */
     background: rgba(255, 255, 255, 0.3); /* Transparansi untuk elemen dalam kartu */
     text-align: center; /* Pusatkan semua teks */
@@ -151,6 +157,30 @@ button:hover {
     margin-bottom: 1rem; /* Jarak dari teks */
     max-width: 80%; /* Batasi lebar gambar */
     height: auto; /* Pertahankan aspek rasio */
+}
+
+/* Diabetes Risk Section */
+.diabetes-risk {
+    margin: 2rem 0; /* Increase margin for better spacing */
+    padding: 2rem; /* Increase padding for better spacing */
+    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 0, 0, 0.1); /* Light red background for highlighting */
+    border: 2px solid #d94e4e; /* Red border for distinction */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    text-align: center; /* Center align text */
+    animation: pulse 1.5s infinite; /* Add pulse animation */
+}
+
+.diabetes-risk h3 {
+    font-size: 1.8rem; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: #d94e4e; /* Red color for emphasis */
+}
+
+.diabetes-risk p {
+    font-size: 1.2rem; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: #333; /* Dark color for emphasis */
 }
 
 /* Animasi */
@@ -183,6 +213,18 @@ button:hover {
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .hidden {
     display: none;
 }
@@ -197,6 +239,7 @@ button:hover {
     .glass-card {
         padding: 1.5rem;
         font-size: 0.9rem;
+        margin: 1.5rem 0; /* Add margin for better spacing */
     }
 
     button {
@@ -215,7 +258,8 @@ button:hover {
 
     .result-item, .action-card {
         width: 100%; /* Full width for items */
-        margin: 0.5rem 0; /* Reduce margin */
+        margin: 1rem 0; /* Add margin for better spacing */
+        padding: 1rem; /* Add padding for better spacing */
     }
 }
 
@@ -223,11 +267,13 @@ button:hover {
     .glass-card {
         padding: 1rem;
         font-size: 0.85rem;
+        margin: 1rem 0; /* Add margin for better spacing */
     }
 
     .result-item, .action-card {
         padding: 0.8rem;
         font-size: 0.85rem;
+        margin: 0.8rem 0; /* Add margin for better spacing */
     }
 
     button {
