@@ -9,16 +9,33 @@
     <meta http-equiv="Expires" content="0">
     <title>NIMOS</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo {
+            max-width: 80%;
+            /* Adjust this value as needed */
+            height: auto;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo" />
+        </div>
+    </header>
     <main class="bg-green">
         <div class="glass-card animate-fade-in">
             <h1>Selamat Datang di <span class="brand">NIMOS</span></h1>
             <p class="subtitle" style="text-align: left;">Sistem Pemantauan dan Observasi Non-Invasif</p>
             <div class="button-group">
-                <button class="primary-btn" onclick="fillPersonalData()">Isi Data Diri</button>
-                <button class="secondary-btn" onclick="startDetection()">Lewati & Mulai Deteksi Dini</button>
+                <button class="primary-btn" onclick="fillPersonalData()">Mulai Deteksi Dini</button>
             </div>
         </div>
     </main>
