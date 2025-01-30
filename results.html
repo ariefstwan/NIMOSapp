@@ -15,10 +15,10 @@
             <div class="analysis-row">
                 <div class="result-item">
                     <img src="age.png" alt="Umur" class="result-icon">
-                    <h3>Umur</h3>
-                    <p style="text-align: center;">Umur Anda adalah <strong><span id="age-display"></span>
+                    <h3>Usia</h3>
+                    <p style="text-align: center;">Usia Anda adalah <strong><span id="age-display"></span>
                             tahun</strong>.</p>
-                    <p class="analysis" style="text-align: center;">Umur yang lebih tua dapat meningkatkan risiko
+                    <p class="analysis" style="text-align: center;">Usia yang lebih tua dapat meningkatkan risiko
                         diabetes.</p>
                 </div>
 
@@ -93,8 +93,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('age-display').textContent = localStorage.getItem('age');
-            document.getElementById('weight-display').textContent = localStorage.getItem('weight');
-            document.getElementById('height-display').textContent = localStorage.getItem('height');
             document.getElementById('bmi-display').textContent = localStorage.getItem('bmi');
             document.getElementById('family-diabetes-display').textContent = localStorage.getItem(
                 'familyDiabetes') === 'yes' ? 'Ya' : 'Tidak';
