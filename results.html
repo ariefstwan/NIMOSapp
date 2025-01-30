@@ -14,20 +14,38 @@
             <h3 style="text-align: center;">Hasil Analisis Anda</h3>
             <div class="analysis-row">
                 <div class="result-item">
+                    <img src="age.png" alt="Umur" class="result-icon">
+                    <h3>Umur</h3>
+                    <p style="text-align: center;">Umur Anda adalah <strong><span id="age-display"></span>
+                            tahun</strong>.</p>
+                    <p class="analysis" style="text-align: center;">Umur yang lebih tua dapat meningkatkan risiko
+                        diabetes.</p>
+                </div>
+
+                <div class="result-item">
+                    <img src="bmi.png" alt="BMI" class="result-icon">
+                    <h3>BMI</h3>
+                    <p style="text-align: center;">BMI Anda adalah <strong><span id="bmi-display"></span></strong>.</p>
+                    <p class="analysis" style="text-align: center;">BMI yang lebih tinggi dapat meningkatkan risiko
+                        diabetes.</p>
+                </div>
+
+                <div class="result-item">
+                    <img src="family.png" alt="Riwayat Keluarga" class="result-icon">
+                    <h3>Riwayat Keluarga</h3>
+                    <p style="text-align: center;">Keluarga dengan diabetes: <strong><span
+                                id="family-diabetes-display"></span></strong>.</p>
+                    <p class="analysis" style="text-align: center;">Riwayat keluarga dengan diabetes dapat meningkatkan
+                        risiko Anda.</p>
+                </div>
+
+                <div class="result-item">
                     <img src="2.png" alt="Langkah Harian" class="result-icon">
                     <h3>Aktivitas Fisik</h3>
                     <p style="text-align: center;">Langkah harian Anda masih rendah, yaitu sekitar <strong>4,500 langkah
                             per hari</strong>.</p>
                     <p class="analysis" style="text-align: center;">Ayo tingkatkan hingga <strong>7,000
                             langkah per hari</strong> untuk menurunkan risiko Diabetes!</p>
-                </div>
-
-                <div class="result-item">
-                    <img src="1.png" alt="Kualitas Tidur" class="result-icon">
-                    <h3>Kualitas Tidur</h3>
-                    <p style="text-align: center;">Rata-rata tidur anda sekitar <strong>5 jam per malam</strong>.</p>
-                    <p class="analysis" style="text-align: center;">Mari usahakan tidur <strong>7-8 jam</strong> setiap
-                        malam untuk turunkan.</p>
                 </div>
 
                 <div class="result-item">
@@ -42,7 +60,9 @@
 
             <div class="diabetes-risk highlight animate-fade-in">
                 <h3 style="text-align: center;">Risiko Diabetes</h3>
-                <p style="text-align: center;">Hasil menunjukkan risiko diabetes sebesar <strong>85%</strong>.</p>
+                <p style="text-align: center;">Hasl menunjukkan risiko diabetes sebesar <strong>85%</strong>.</p>
+                <p style="text-align: center;">Umur Ainda, BMI, dan riwayat keluarga dengan diabetes berkontribusi pada
+                    hasil ini.</p>
             </div>
 
             <h3 style="text-align: center; margin-top: 2rem;">Rekomendasi</h3> <!-- Add "Rekomendasi" heading -->
@@ -70,14 +90,18 @@
         </div>
     </div>
 
-<<<<<<< HEAD
-    <footer>
-    </footer>
-=======
     <footer></footer>
->>>>>>> c988e4af305445e09ff79e7324369beb53281df5
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('age-display').textContent = localStorage.getItem('age');
+            document.getElementById('weight-display').textContent = localStorage.getItem('weight');
+            document.getElementById('height-display').textContent = localStorage.getItem('height');
+            document.getElementById('bmi-display').textContent = localStorage.getItem('bmi');
+            document.getElementById('family-diabetes-display').textContent = localStorage.getItem(
+                'familyDiabetes') === 'yes' ? 'Ya' : 'Tidak';
+        });
+
         function goHome() {
             window.location.href = "index.html";
         }

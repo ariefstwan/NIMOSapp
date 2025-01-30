@@ -183,6 +183,46 @@ button:hover {
     color: #333; /* Dark color for emphasis */
 }
 
+/* Form Styling */
+.form-styled {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-styled label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-styled input,
+.form-styled select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-styled button {
+    margin-top: 1rem;
+}
+
+/* Personal Data Section */
+.personal-data {
+    background: rgba(255, 255, 255, 0.3); /* Light background */
+    padding: 1.5rem; /* Padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 2rem; /* Margin for spacing */
+}
+
+.personal-data p {
+    font-size: 1rem; /* Font size */
+    line-height: 1.6; /* Line height */
+    color: #333; /* Text color */
+    margin: 0.5rem 0; /* Margin for spacing */
+}
+
 /* Animasi */
 @keyframes spin {
     0% {
