@@ -110,6 +110,15 @@ button:hover {
     color: #d94e4e; /* Red color for emphasis */
 }
 
+.glass-card p.subtitle {
+    text-align: center;
+    /* Center the subtitle */
+    margin: 0 auto;
+    /* Center the subtitle horizontally */
+    display: block;
+    width: 100%;
+}
+
 /* Heading dan Text Alignment */
 .glass-card h1 {
     font-size: 1.6rem;
